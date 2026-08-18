@@ -1,107 +1,98 @@
 ---
-title: Features
-description: A full tour of Coterie's give-to-get engagement system, from parties and credits to admin and branding tools.
+title: Platform features
+description: A full map of what's in Coterie, for members, creators, and white-label operators.
 ---
 
 ## Overview
 
-Coterie is built around one mechanic: **give-to-get reciprocity**, run in scheduled sessions instead of an open-ended feed. Members submit content, get matched with others to engage with, and earn credit for following through. Everything else — niches, resources, the AI assistant, admin tools — supports that loop.
+Coterie has three audiences, and the docs are organized around them. Start with [How it works](/how-it-works) if you haven't already — everything below builds on that loop.
 
 <Columns cols={2}>
-  <Card title="Parties" icon="calendar" href="#parties">
-    Time-boxed sessions where submissions and assignments happen.
+  <Card title="For Members" icon="users" href="/members/joining">
+    Join a community, submit your work, and build reliability through reciprocity.
   </Card>
-  <Card title="Assignments &amp; Credits" icon="repeat" href="#assignments-and-credits">
-    The reciprocity engine — who owes engagement to whom, and how it's tracked.
+  <Card title="For Creators" icon="rocket" href="/creators/creating-your-coterie">
+    Run your own community — applications, scheduling, moderation, and settings.
   </Card>
-  <Card title="Niches" icon="layers" href="#niches">
-    Members are matched within their industry or content niche.
+  <Card title="White-Label &amp; Pro" icon="palette" href="/pro/branding-and-white-label">
+    Brand it as your own: custom domains, theming, and plan tiers.
   </Card>
-  <Card title="Admin &amp; Branding" icon="settings" href="#admin-and-creator-tools">
-    Everything a creator needs to run and brand their own community.
+  <Card title="Integrations" icon="plug" href="/integrations">
+    What Coterie connects to today, and what's on the roadmap.
   </Card>
 </Columns>
 
-## Parties
+## For members
 
-A **party** is a scheduled engagement session with a time window, a maximum number of participants, and a room size. Admins schedule parties from the admin dashboard; members opt in from their **Sessions** calendar.
+<Columns cols={2}>
+  <Card title="Joining" icon="log-in" href="/members/joining">
+    Apply to a community and get set up.
+  </Card>
+  <Card title="Submitting Posts" icon="link" href="/members/submitting-posts">
+    Get your work into a party.
+  </Card>
+  <Card title="Assignments &amp; Reciprocity" icon="repeat" href="/members/assignments-and-reciprocity">
+    What you owe, and how it's matched.
+  </Card>
+  <Card title="Credits &amp; Reliability" icon="star" href="/members/credits-and-reliability">
+    The currency that keeps it fair.
+  </Card>
+  <Card title="Niches" icon="layers" href="/members/niches">
+    Why matching is scoped to your space.
+  </Card>
+  <Card title="Resources" icon="book-open" href="/members/resources">
+    Training content your community publishes.
+  </Card>
+  <Card title="Discover" icon="compass" href="/members/discover">
+    Browse public Coteries to join.
+  </Card>
+  <Card title="Coterie Assistant" icon="sparkles" href="/members/coterie-assistant">
+    Ask about your credits, assignments, and sessions.
+  </Card>
+</Columns>
 
-When a party runs:
+## For creators
 
-1. Members submit a link to a post they want engagement on.
-2. Coterie auto-groups participants into rooms and assigns each member a set of other members' posts.
-3. Members complete their assignments before the window closes.
-4. The party moves through `scheduled → grouping → running → finished`.
+<Columns cols={2}>
+  <Card title="Creating Your Coterie" icon="rocket" href="/creators/creating-your-coterie">
+    Set up your community from scratch.
+  </Card>
+  <Card title="Settings &amp; Party Rules" icon="sliders" href="/creators/settings-and-party-rules">
+    Channels, party size, comment-debt rules.
+  </Card>
+  <Card title="Managing Niches" icon="layers" href="/creators/managing-niches">
+    Define the spaces your members match within.
+  </Card>
+  <Card title="Scheduling Parties" icon="calendar" href="/creators/scheduling-parties">
+    Open sessions and manage grouping.
+  </Card>
+  <Card title="Reviewing Applications" icon="inbox" href="/creators/reviewing-applications">
+    Approve who gets in.
+  </Card>
+  <Card title="Moderation &amp; Reports" icon="shield" href="/creators/moderation-and-reports">
+    Keep quality high with strikes and reports.
+  </Card>
+  <Card title="Community Health" icon="activity" href="/creators/community-health">
+    Aggregate engagement and churn-risk signals.
+  </Card>
+</Columns>
 
-## Assignments and credits
+## White-label &amp; Pro
 
-An **assignment** is the pairing of "this member" with "that post." Each one tracks status, any rating or feedback left, a due date, and an optional skip reason.
-
-Credits are the currency that keeps reciprocity fair:
-
-- Completing an assignment earns credit.
-- Submitting a new post costs credit — if a member has outstanding "comment debt" (assignments they haven't completed), they can't submit again until they catch up.
-- Every credit movement is recorded in an append-only ledger, so a member's balance is always auditable.
-
-Alongside credits, each member has a **reliability score** that reflects how consistently they follow through, plus a strike count for moderation. Members who fall behind can be paused; repeated no-shows accrue strikes.
-
-<Callout kind="tip">
-  Comment debt is what makes this different from a normal engagement pod — you can't just keep posting without giving back.
-</Callout>
-
-## Niches
-
-Every member belongs to one **niche** — the industry or content category they operate in (this is set during onboarding). Assignments and, where enabled, competition-exclusion rules use niche to keep matches relevant and avoid pairing direct competitors.
-
-## Moderation and reporting
-
-Members can **report** a post or an assignment if something's off. Reports go into a queue admins review from the admin dashboard, alongside the strike system for members who repeatedly skip assignments or misbehave.
-
-## Discover
-
-The **Discover** page lists public Coteries across the platform that members can browse and apply to join — separate from any single community's own apply page, and not scoped to a particular tenant.
-
-## Resources
-
-Creators can publish **resources** — training or guide content, optionally gated by plan tier — for their members. These live inside the member app alongside a creator's other custom content.
-
-## Wins
-
-Members can log a **win** — a self-reported success story (a post that did well, a deal that closed, etc.) that shows up on their dashboard. It's a lightweight way to make the value of showing up visible.
-
-## Coterie Assistant
-
-Each community can turn on its own AI assistant — a chatbot scoped to a member's own data (their posts, assignments, credit history). It runs on a creator-supplied OpenAI key (bring-your-own-key), with a configurable daily message cap.
-
-## Admin and creator tools
-
-Everything below is available to a Coterie's admin from their admin dashboard:
-
-<Steps>
-  <Step title="Applications" icon="inbox">
-    Review and approve or reject people applying to join through your public apply page.
-  </Step>
-  <Step title="Parties" icon="calendar">
-    Create and schedule sessions, and manage grouping/room sizing.
-  </Step>
-  <Step title="Settings" icon="sliders">
-    Configure allowed content channels, default party size and window, rotation rules, and strike thresholds.
-  </Step>
-  <Step title="Branding &amp; white-label" icon="palette">
-    Set your logo, accent color, and theme. Custom domains are supported in the product, letting a community run under its own domain rather than an `app.coterie.rsvp` URL.
-  </Step>
-  <Step title="Email" icon="mail">
-    Override system email copy per-tenant, or configure your own SMTP sender instead of the platform default.
-  </Step>
-  <Step title="Plans" icon="tag">
-    Define paid access tiers (name, price, interval, features) for your community. Plan definitions exist today, but there's no live checkout yet — see [Integrations](/integrations).
-  </Step>
-  <Step title="Custom menu" icon="menu">
-    Add your own links to the member sidebar, opening in a new tab or embedded in-app.
-  </Step>
-  <Step title="Community health" icon="activity">
-    A view of aggregate engagement and churn-risk signals across your community.
-  </Step>
-</Steps>
-
-Explore [Quickstart](/quickstart) to join or create a Coterie, or [Integrations](/integrations) for what the platform connects to today.
+<Columns cols={2}>
+  <Card title="Branding &amp; White-Label" icon="palette" href="/pro/branding-and-white-label">
+    Your logo and colors, throughout.
+  </Card>
+  <Card title="Custom Domains" icon="globe" href="/pro/custom-domains">
+    Run your Coterie on your own domain.
+  </Card>
+  <Card title="Plans &amp; Pricing" icon="tag" href="/pro/plans-and-pricing">
+    Define paid tiers for your community.
+  </Card>
+  <Card title="Email Customization" icon="mail" href="/pro/email-customization">
+    Your voice in every system email.
+  </Card>
+  <Card title="AI Assistant Setup" icon="cpu" href="/pro/ai-assistant-setup">
+    Turn on the Coterie Assistant for your members.
+  </Card>
+</Columns>

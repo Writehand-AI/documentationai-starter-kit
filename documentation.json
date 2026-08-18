@@ -19,9 +19,19 @@
             "icon": "rocket",
             "pages": [
               {
-                "title": "Introduction",
+                "title": "What is Coterie?",
                 "path": "introduction",
                 "icon": "star"
+              },
+              {
+                "title": "How it Works",
+                "path": "how-it-works",
+                "icon": "repeat"
+              },
+              {
+                "title": "Platform Features",
+                "path": "features",
+                "icon": "grid"
               },
               {
                 "title": "Quick Start",
@@ -31,13 +41,48 @@
             ]
           },
           {
-            "group": "Core Concepts",
-            "icon": "layers",
+            "group": "For Members",
+            "icon": "users",
             "pages": [
               {
-                "title": "Features",
-                "path": "features",
-                "icon": "file-text"
+                "title": "Joining",
+                "path": "members/joining",
+                "icon": "log-in"
+              },
+              {
+                "title": "Submitting Posts",
+                "path": "members/submitting-posts",
+                "icon": "link"
+              },
+              {
+                "title": "Assignments &amp; Reciprocity",
+                "path": "members/assignments-and-reciprocity",
+                "icon": "repeat"
+              },
+              {
+                "title": "Credits &amp; Reliability",
+                "path": "members/credits-and-reliability",
+                "icon": "star"
+              },
+              {
+                "title": "Niches",
+                "path": "members/niches",
+                "icon": "layers"
+              },
+              {
+                "title": "Resources",
+                "path": "members/resources",
+                "icon": "book-open"
+              },
+              {
+                "title": "Discover",
+                "path": "members/discover",
+                "icon": "compass"
+              },
+              {
+                "title": "Coterie Assistant",
+                "path": "members/coterie-assistant",
+                "icon": "sparkles"
               }
             ]
           },
@@ -110,14 +155,5 @@
         ]
       }
     ]
-  },
-  "customCss": [
-    {
-      "src": "styles/Double.css"
-    }
-  ],
-  "template": "atlas",
-  "favicon": "https://blob-cdn.documentation.ai/org-708d97b3-a195-4b0f-8911-093c012c99d6/doc-fb3557a6-d141-4de6-952b-fdd32471e5cd/1787038889294-vem438givn-coterielogo.svg?rasterize-bypass=true",
-  "logo-light": "https://blob-cdn.documentation.ai/org-708d97b3-a195-4b0f-8911-093c012c99d6/doc-fb3557a6-d141-4de6-952b-fdd32471e5cd/1787038917308-v1lsw3rgjda-coteriewordmark.svg?rasterize-bypass=true",
-  "logo-dark": "https://blob-cdn.documentation.ai/org-708d97b3-a195-4b0f-8911-093c012c99d6/doc-fb3557a6-d141-4de6-952b-fdd32471e5cd/1787038931040-z2zodz9dsqk-coteriewordmarkwhite.svg?rasterize-bypass=true"
+  }
 }
