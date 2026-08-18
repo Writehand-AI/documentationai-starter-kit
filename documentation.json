@@ -128,6 +128,37 @@
             ]
           },
           {
+            "group": "White-Label &amp; Pro",
+            "icon": "palette",
+            "pages": [
+              {
+                "title": "Branding &amp; White-Label",
+                "path": "pro/branding-and-white-label",
+                "icon": "palette"
+              },
+              {
+                "title": "Custom Domains",
+                "path": "pro/custom-domains",
+                "icon": "globe"
+              },
+              {
+                "title": "Plans &amp; Pricing",
+                "path": "pro/plans-and-pricing",
+                "icon": "tag"
+              },
+              {
+                "title": "Email Customization",
+                "path": "pro/email-customization",
+                "icon": "mail"
+              },
+              {
+                "title": "AI Assistant Setup",
+                "path": "pro/ai-assistant-setup",
+                "icon": "cpu"
+              }
+            ]
+          },
+          {
             "group": "Guides",
             "icon": "compass",
             "pages": [
