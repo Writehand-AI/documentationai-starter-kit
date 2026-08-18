@@ -87,6 +87,47 @@
             ]
           },
           {
+            "group": "For Creators",
+            "icon": "rocket",
+            "pages": [
+              {
+                "title": "Creating Your Coterie",
+                "path": "creators/creating-your-coterie",
+                "icon": "rocket"
+              },
+              {
+                "title": "Settings &amp; Party Rules",
+                "path": "creators/settings-and-party-rules",
+                "icon": "sliders"
+              },
+              {
+                "title": "Managing Niches",
+                "path": "creators/managing-niches",
+                "icon": "layers"
+              },
+              {
+                "title": "Scheduling Parties",
+                "path": "creators/scheduling-parties",
+                "icon": "calendar"
+              },
+              {
+                "title": "Reviewing Applications",
+                "path": "creators/reviewing-applications",
+                "icon": "inbox"
+              },
+              {
+                "title": "Moderation &amp; Reports",
+                "path": "creators/moderation-and-reports",
+                "icon": "shield"
+              },
+              {
+                "title": "Community Health",
+                "path": "creators/community-health",
+                "icon": "activity"
+              }
+            ]
+          },
+          {
             "group": "Guides",
             "icon": "compass",
             "pages": [
