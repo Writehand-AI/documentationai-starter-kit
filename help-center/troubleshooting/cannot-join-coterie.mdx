@@ -5,24 +5,31 @@ description: Resolve join issues quickly.
 
 ## Symptoms
 
-- Invite link doesn’t work
-- Error: "Access denied" or "Link expired"
+- Applying at a Coterie's page (`coterie.rsvp/c/:slug`) doesn't lead anywhere, or shows an error
+- You applied but never got an invite
+- You have an invite, but signing up at `app.coterie.rsvp` fails
+- You're signed in but don't see the community you expected
 
-## Causes
-
-- Invite link used or expired
-- Not logged in to Productised
-
-## Solution
+## Causes and fixes
 
 <Steps>
-  <Step title="Check invite">
-    Ensure the invite link is valid and unused.
+  <Step title="Check the link">
+    Make sure you're using the exact link the creator shared, or the one from their public apply page. A mistyped slug will 404 instead of loading the community.
   </Step>
-  <Step title="Login">
-    Login to your Productised account before using the link.
+
+  <Step title="Your application may still be pending">
+    Not every Coterie auto-approves. If the creator reviews applications manually, you'll need to wait for approval before you get an invite — check back with them if it's been a while.
   </Step>
-  <Step title="Contact owner">
-    Ask the Coterie admin to resend your invite if still stuck.
+
+  <Step title="Create your account with the invited email">
+    Your invite is tied to the email address you applied with. Sign up at [app.coterie.rsvp](https://app.coterie.rsvp) using that same address — a mismatch will block account creation.
+  </Step>
+
+  <Step title="Complete onboarding">
+    Even after your account exists, you won't see the community's dashboard until you finish onboarding (picking a niche and accepting the rules).
+  </Step>
+
+  <Step title="Ask the admin to resend">
+    If you're still stuck, ask the Coterie's admin to check your application status or resend your invite from their applications queue.
   </Step>
 </Steps>

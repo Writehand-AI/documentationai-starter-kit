@@ -1,148 +1,107 @@
 ---
 title: Features
-description: Overview of Coterie's core capabilities and common use cases for creators and teams.
+description: A full tour of Coterie's give-to-get engagement system, from parties and credits to admin and branding tools.
 ---
 
 ## Overview
 
-Coterie helps creators and teams build focused communities for authentic engagement. You form small groups, called coteries, where members support each other's content across platforms. This creates real reciprocity without bots or fake interactions.
-
-Key capabilities include circle creation, cross-platform tools, support features, and analytics. Use these to grow your audience sustainably.
+Coterie is built around one mechanic: **give-to-get reciprocity**, run in scheduled sessions instead of an open-ended feed. Members submit content, get matched with others to engage with, and earn credit for following through. Everything else — niches, resources, the AI assistant, admin tools — supports that loop.
 
 <Columns cols={2}>
-  <Card title="Circle Management" icon="users" href="#circle-creation">
-    Create and manage private groups for targeted engagement.
+  <Card title="Parties" icon="calendar" href="#parties">
+    Time-boxed sessions where submissions and assignments happen.
   </Card>
-  <Card title="Cross-Platform" icon="globe" href="#cross-platform">
-    Engage seamlessly on Twitter, Instagram, and TikTok.
+  <Card title="Assignments &amp; Credits" icon="repeat" href="#assignments-and-credits">
+    The reciprocity engine — who owes engagement to whom, and how it's tracked.
   </Card>
-  <Card title="Reciprocity Tools" icon="heart" href="#reciprocity">
-    Structured support to boost visibility and comments.
+  <Card title="Niches" icon="layers" href="#niches">
+    Members are matched within their industry or content niche.
   </Card>
-  <Card title="Analytics" icon="bar-chart-3" href="#analytics">
-    Track performance and member contributions.
+  <Card title="Admin &amp; Branding" icon="settings" href="#admin-and-creator-tools">
+    Everything a creator needs to run and brand their own community.
   </Card>
 </Columns>
 
+## Parties
+
+A **party** is a scheduled engagement session with a time window, a maximum number of participants, and a room size. Admins schedule parties from the admin dashboard; members opt in from their **Sessions** calendar.
+
+When a party runs:
+
+1. Members submit a link to a post they want engagement on.
+2. Coterie auto-groups participants into rooms and assigns each member a set of other members' posts.
+3. Members complete their assignments before the window closes.
+4. The party moves through `scheduled → grouping → running → finished`.
+
+## Assignments and credits
+
+An **assignment** is the pairing of "this member" with "that post." Each one tracks status, any rating or feedback left, a due date, and an optional skip reason.
+
+Credits are the currency that keeps reciprocity fair:
+
+- Completing an assignment earns credit.
+- Submitting a new post costs credit — if a member has outstanding "comment debt" (assignments they haven't completed), they can't submit again until they catch up.
+- Every credit movement is recorded in an append-only ledger, so a member's balance is always auditable.
+
+Alongside credits, each member has a **reliability score** that reflects how consistently they follow through, plus a strike count for moderation. Members who fall behind can be paused; repeated no-shows accrue strikes.
+
 <Callout kind="tip">
-  Start with 5-10 members per coterie for best results. Larger groups dilute engagement.
+  Comment debt is what makes this different from a normal engagement pod — you can't just keep posting without giving back.
 </Callout>
 
-## Circle Creation and Management
+## Niches
 
-Build your coterie in minutes. You invite trusted creators who align with your niche.
+Every member belongs to one **niche** — the industry or content category they operate in (this is set during onboarding). Assignments and, where enabled, competition-exclusion rules use niche to keep matches relevant and avoid pairing direct competitors.
+
+## Moderation and reporting
+
+Members can **report** a post or an assignment if something's off. Reports go into a queue admins review from the admin dashboard, alongside the strike system for members who repeatedly skip assignments or misbehave.
+
+## Discover
+
+The **Discover** page lists public Coteries across the platform that members can browse and apply to join — separate from any single community's own apply page, and not scoped to a particular tenant.
+
+## Resources
+
+Creators can publish **resources** — training or guide content, optionally gated by plan tier — for their members. These live inside the member app alongside a creator's other custom content.
+
+## Wins
+
+Members can log a **win** — a self-reported success story (a post that did well, a deal that closed, etc.) that shows up on their dashboard. It's a lightweight way to make the value of showing up visible.
+
+## Coterie Assistant
+
+Each community can turn on its own AI assistant — a chatbot scoped to a member's own data (their posts, assignments, credit history). It runs on a creator-supplied OpenAI key (bring-your-own-key), with a configurable daily message cap.
+
+## Admin and creator tools
+
+Everything below is available to a Coterie's admin from their admin dashboard:
 
 <Steps>
-  <Step title="Create Circle" icon="plus">
-    Log in to your dashboard at `https://app.coterie.rsvp`.
-
-    Name your circle, set goals like "weekly post support", and define rules.
+  <Step title="Applications" icon="inbox">
+    Review and approve or reject people applying to join through your public apply page.
   </Step>
-  <Step title="Invite Members" icon="user-plus">
-    Share invite links via email or Discord.
-
-    Approve members manually to ensure quality.
+  <Step title="Parties" icon="calendar">
+    Create and schedule sessions, and manage grouping/room sizing.
   </Step>
-  <Step title="Set Schedule" icon="calendar">
-    Configure engagement cadences, like "3 comments per post".
+  <Step title="Settings" icon="sliders">
+    Configure allowed content channels, default party size and window, rotation rules, and strike thresholds.
   </Step>
-  <Step title="Manage Activity" icon="settings">
-    Monitor participation and remove inactive members.
+  <Step title="Branding &amp; white-label" icon="palette">
+    Set your logo, accent color, and theme. Custom domains are supported in the product, letting a community run under its own domain rather than an `app.coterie.rsvp` URL.
+  </Step>
+  <Step title="Email" icon="mail">
+    Override system email copy per-tenant, or configure your own SMTP sender instead of the platform default.
+  </Step>
+  <Step title="Plans" icon="tag">
+    Define paid access tiers (name, price, interval, features) for your community. Plan definitions exist today, but there's no live checkout yet — see [Integrations](/integrations).
+  </Step>
+  <Step title="Custom menu" icon="menu">
+    Add your own links to the member sidebar, opening in a new tab or embedded in-app.
+  </Step>
+  <Step title="Community health" icon="activity">
+    A view of aggregate engagement and churn-risk signals across your community.
   </Step>
 </Steps>
 
-## Cross-Platform Engagement
-
-Coterie works across major platforms. You post content, and members engage directly.
-
-<Tabs>
-  <Tab title="Twitter" icon="twitter">
-    Schedule tweets and assign comment queues.
-
-    ```javascript
-    // Example: Post to Twitter via Coterie API
-    const response = await fetch('https://api.coterie.rsvp/v1/posts', {
-      method: 'POST',
-      headers: { 'Authorization': 'Bearer YOUR_TOKEN' },
-      body: JSON.stringify({
-        platform: 'twitter',
-        content: 'New video drop! Check it out.',
-        circleId: 'coterie-123'
-      })
-    });
-    ```
-  </Tab>
-  <Tab title="Instagram" icon="instagram">
-    Share Reels and Stories for quick reciprocity.
-
-    ```javascript
-    // Instagram post example
-    const post = await coterieClient.posts.create({
-      platform: 'instagram',
-      type: 'reel',
-      caption: 'Behind the scenes!',
-      circleId: 'coterie-123'
-    });
-    ```
-  </Tab>
-  <Tab title="TikTok" icon="video">
-    Viral challenges with group support.
-
-    ```javascript
-    // TikTok integration
-    await coterieClient.engage({
-      platform: 'tiktok',
-      videoId: 'tt-456',
-      action: 'comment',
-      message: 'Love this trend!'
-    });
-    ```
-  </Tab>
-</Tabs>
-
-## Reciprocity and Support Tools
-
-Encourage genuine interactions with built-in prompts and queues.
-
-<Board title="Weekly Engagement Queue">
-  <BoardColumn title="To Engage" color="0" icon="clock">
-    <BoardCard title="Sarah's Twitter thread" description="3 likes + 1 comment" icon="twitter" dueDate="2024-12-15" />
-    <BoardCard title="Mike's IG Reel" description="Watch and duet" icon="instagram" />
-  </BoardColumn>
-  <BoardColumn title="In Progress" color="1" icon="loader-2">
-    <BoardCard title="Ana's TikTok" description="Commenting now" author="You" />
-  </BoardColumn>
-  <BoardColumn title="Completed" color="2" icon="check-circle">
-    <BoardCard title="Last week's posts" description="All supported" createdAt="2024-12-10" />
-  </BoardColumn>
-</Board>
-
-## Performance Analytics
-
-Measure what matters: engagement lift, reciprocity rates, and growth.
-
-<Expandable title="View Sample Dashboard Metrics" default-open="true">
-  Track metrics like:
-
-  | Metric | Description | Target |
-  |--------|-------------|--------|
-  | Engagement Rate | Comments per post | `>5%` |
-  | Reciprocity Score | Mutual support ratio | `90%+` |
-  | Member Activity | Posts per week | `3+` |
-
-  Export data via API for custom reports.
-</Expandable>
-
-```mermaid
-graph LR
-    A[Post Content] --> B[Group Notification]
-    B --> C[Members Engage]
-    C --> D[Analytics Update]
-    D --> E[Performance Report]
-```
-
-<Callout kind="success">
-  Teams using Coterie see 3x comment growth in 30 days.
-</Callout>
-
-Explore [quickstart](/quickstart) for setup or [authentication](/authentication) for API access.
+Explore [Quickstart](/quickstart) to join or create a Coterie, or [Integrations](/integrations) for what the platform connects to today.

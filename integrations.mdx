@@ -1,179 +1,50 @@
 ---
 title: Integrations
-description: How to connect Coterie with social platforms and other tools for enhanced workflows.
+description: What Coterie connects to today, and what's on the roadmap.
 ---
 
 ## Overview
 
-Coterie supports seamless integrations with popular social media platforms, webhooks for real-time notifications, and third-party apps to automate your engagement workflows. You can connect your accounts to automatically post updates, track reciprocity, and trigger actions based on member interactions.
+Coterie is a hosted platform — most of what it connects to is infrastructure you won't need to configure yourself. The exceptions are the pieces a creator can bring their own credentials for.
 
-<Callout kind="info">
-  All integrations require your Coterie API key, available in your dashboard at `https://dashboard.coterie.rsvp/settings/api`.
+<Callout kind="warning">
+  Coterie does not have a public developer API today. There's no way to integrate with your community's parties, posts, assignments, or credits programmatically yet.
 </Callout>
 
-## Supported Platforms
+## Sign-in
 
-Connect Coterie directly to leading social platforms for effortless content sharing and engagement tracking.
+Members and creators can sign in with:
 
-<Columns cols={3}>
-  <Card title="X (Twitter)" icon="twitter" href="/docs/integrations/twitter">
-    Post threads and replies automatically from your Coterie groups.
-  </Card>
-  <Card title="Instagram" icon="instagram" href="/docs/integrations/instagram">
-    Share stories and feed posts with reciprocal support notifications.
-  </Card>
-  <Card title="LinkedIn" icon="linkedin" href="/docs/integrations/linkedin">
-    Publish professional updates and track profile visits.
-  </Card>
-  <Card title="YouTube" icon="youtube" href="/docs/integrations/youtube">
-    Sync video uploads and community engagement metrics.
-  </Card>
-</Columns>
+- Email and password
+- Google
+- GitHub
 
-## Webhook Configuration
+There's no magic-link sign-in currently.
 
-Set up webhooks to receive real-time events from Coterie, such as new member joins or engagement completions.
+## Email
 
-<Steps>
-  <Step title="Create Webhook" icon="settings">
-    Navigate to your dashboard integrations page and click "Add Webhook".
+Coterie sends transactional email (invites, session reminders, application decisions) through **Postmark** by default. A creator can override this and configure their own SMTP sender for their community, and can customize the copy of individual system emails per-tenant.
 
-    Enter your endpoint URL, e.g., `https://your-webhook-url.com/coterie-events`.
-  </Step>
-  <Step title="Verify Endpoint" icon="shield">
-    Coterie sends a challenge request. Respond with the `challenge` value in the `X-Coterie-Challenge` header.
-  </Step>
-  <Step title="Handle Events" icon="zap">
-    Process incoming POST requests with event data.
-  </Step>
-</Steps>
+## AI Assistant
 
-Here is a sample webhook handler:
+The Coterie Assistant is **bring-your-own-key**: a creator supplies their own OpenAI API key to enable the chatbot for their community. It's disabled by default until a key is configured, and runs with a configurable daily message cap.
 
-<CodeGroup tabs="Node.js,Python">
-  ```javascript
-  const express = require('express');
-  const crypto = require('crypto');
-  const app = express();
+## Data and storage
 
-  app.use(express.json());
+Coterie is built on **Supabase** for its database and file storage.
 
-  app.post('/coterie-events', (req, res) => {
-    const signature = req.headers['x-coterie-signature'];
-    const payload = JSON.stringify(req.body);
-    const expectedSig = 'sha256=' + crypto.createHmac('sha256', 'YOUR_WEBHOOK_SECRET').update(payload).digest('hex');
+## Hosting
 
-    if (signature !== expectedSig) {
-      return res.status(401).send('Unauthorized');
-    }
+Coterie runs on **Fly.io**, including provisioning for custom domains when a creator enables white-label branding.
 
-    console.log('Event:', req.body.event_type, req.body.data);
-    res.status(200).send('OK');
-  });
-  ```
-  ```python
-  from flask import Flask, request, abort
-  import hmac
-  import hashlib
+## Payments
 
-  app = Flask(__name__)
-  WEBHOOK_SECRET = 'YOUR_WEBHOOK_SECRET'
-
-  @app.route('/coterie-events', methods=['POST'])
-  def webhook():
-      signature = request.headers.get('X-Coterie-Signature')
-      payload = request.get_data()
-      expected_sig = 'sha256=' + hmac.new(
-          WEBHOOK_SECRET.encode(), payload, hashlib.sha256
-      ).hexdigest()
-
-      if signature != expected_sig:
-          abort(401)
-
-      data = request.json
-      print(f"Event: {data['event_type']}, Data: {data['data']}")
-      return 'OK', 200
-  ```
-</CodeGroup>
-
-## Third-Party App Connections
-
-Integrate Coterie with popular automation tools using OAuth or API keys.
-
-<Tabs>
-  <Tab title="Zapier" icon="zap">
-    <ParamField query="api_key" param-type="string" required="true">
-      Your Coterie API key.
-    </ParamField>
-
-    Create a Zap with Coterie as the trigger app for events like "New Engagement".
-
-    ```javascript
-    // Sample Zapier action script
-    const options = {
-      url: 'https://api.coterie.rsvp/v1/engagements',
-      method: 'POST',
-      headers: { Authorization: `Bearer ${input.api_key}` },
-      body: { group_id: input.group_id }
-    };
-    ```
-  </Tab>
-  <Tab title="Slack" icon="message-circle">
-    Send notifications to your Slack channel on new reciprocity requests.
-
-    Use the Incoming Webhooks app in Slack and paste your Coterie webhook URL.
-  </Tab>
-  <Tab title="Make (Integromat)" icon="play">
-    Build complex automations with visual scenarios connecting Coterie events to other apps.
-  </Tab>
-</Tabs>
-
-## Custom Automation Setup
-
-For advanced users, build custom integrations using Coterie's REST API.
-
-<Expandable title="API Authentication Example" default-open="false">
-
-Authenticate requests with your API key:
-
-```bash
-curl -X GET https://api.coterie.rsvp/v1/groups \
-  -H "Authorization: Bearer YOUR_API_KEY"
-```
-
-</Expandable>
-
-```mermaid
-sequenceDiagram
-  participant U as User
-  participant C as Coterie API
-  participant W as Webhook Endpoint
-  participant T as Third-Party App
-
-  U->>C: POST /webhooks (setup)
-  C->>W: Challenge verification
-  W->>C: Respond with challenge
-  Note over C,W: Webhook active
-  U->>T: Configure trigger/action
-  C->>W: Event payload
-  W->>T: Forward data
-```
-
-## Best Practices
-
-- Always validate webhook signatures to prevent spoofing.
-- Use exponential backoff for retries on failed deliveries.
-- Test integrations in a sandbox group before production.
-
-<Columns cols={2}>
-  <Card title="Troubleshooting" icon="alert-triangle" href="/docs/troubleshooting">
-    Common integration errors and fixes.
-  </Card>
-  <Card title="API Reference" icon="code" href="/docs/api-reference">
-    Full endpoint documentation.
-  </Card>
-</Columns>
-
-<Callout kind="tip">
-  Monitor your integrations dashboard for delivery rates and error logs.
+<Callout kind="warning">
+  Billing is not live yet. Creators can define paid plan tiers (name, price, interval, features) in their settings, but there's no checkout flow connected — joining and running a Coterie is free for now.
 </Callout>
+
+## What's not here yet
+
+- A public API for third-party integrations
+- Live billing/checkout for paid plans
+- Direct posting or engagement through social platform APIs — Coterie works by members sharing a link to content they've already published, not by posting on their behalf

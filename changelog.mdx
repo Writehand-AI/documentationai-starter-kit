@@ -1,121 +1,44 @@
 ---
 title: Changelog
-description: Version history with 2-3 recent updates, new features, and changes.
+description: Recent updates to Coterie.
 ---
 
 ## Recent Updates
 
 <Callout kind="info">
-  Stay up to date with the latest improvements to Coterie. Check this page regularly for new features, bug fixes, and breaking changes.
+  Coterie is early and moving fast. This log covers the most recent, user-facing changes.
 </Callout>
 
-<Update label="2024-12-05" description="v1.3.0" tags={["feature", "improvement"]}>
+<Update label="2026-08-18" description="Coterie Assistant &amp; email overhaul" tags={["feature"]}>
 
-## New Features
-
-- Added advanced community analytics dashboard to track engagement metrics.
-- Introduced reciprocity matching algorithm for better content support suggestions.
-
-## Improvements
-
-- Optimized loading times by `>30%` for member feeds.
-- Enhanced mobile responsiveness for event RSVPs.
-
-## Bug Fixes
-
-- Resolved notification delivery delays.
-- Fixed profile sync issues with external platforms.
+- Added the Coterie Assistant — a per-community AI chatbot scoped to a member's own data, using a creator-supplied OpenAI key.
+- Rebuilt transactional email on Postmark, with per-tenant template overrides.
 
 </Update>
 
-<Update label="2024-11-15" description="v1.2.0" tags={["feature", "bugfix"]}>
+<Update label="2026-08-16" description="Onboarding, Discover, and custom menu" tags={["feature"]}>
 
-## New Features
-
-- Launched private coterie groups for exclusive content sharing.
-- Integrated real-time comment reciprocity notifications.
-
-## Bug Fixes
-
-- Patched authentication token refresh errors.
-- Corrected RSVP confirmation email failures.
-
-## Improvements
-
-- Streamlined admin dashboard navigation.
+- Added the Discover page for browsing public Coteries across the platform.
+- Shipped the member onboarding flow (niche selection, rules acceptance).
+- Added support for creators to add custom links to the member sidebar.
+- Integrated the form builder for custom application questions.
 
 </Update>
 
-<Update label="2024-10-20" description="v1.1.0" tags={["feature", "breaking"]}>
+<Update label="2026-08-15" description="Navigation cleanup &amp; admin hub" tags={["improvement", "bugfix"]}>
 
-## New Features
-
-- Core engagement reciprocity system with structured support flows.
-- Basic member onboarding and group creation tools.
-
-## Breaking Changes
-
-- Updated API endpoints to use `/v2/` prefix. Migrate existing integrations.
-
-## Bug Fixes
-
-- Fixed initial group creation validation.
+- Flattened the sidebar navigation and added a dedicated Admin hub.
+- Added an About/white-label section to Discover.
+- Fixed two access-control bugs affecting cross-tenant data exposure.
 
 </Update>
 
-## How to Upgrade
+<Update label="2026-08-14" description="Custom domains &amp; white-label (v1)" tags={["feature"]}>
 
-Upgrading Coterie ensures you get the latest features and security patches. Follow these steps to update safely.
+- Shipped the first version of custom domains and white-label branding, letting a creator run their community under its own domain.
+- First production deployment, running on Fly.io.
 
-<Callout kind="tip">
-  Test upgrades in a staging environment first.
-</Callout>
-
-<Steps>
-  <Step title="Backup Your Data" icon="database">
-
-    Export your communities and member data.
-
-````bash
-coterie-cli backup --output=backup.json
-````
-
-  </Step>
-  <Step title="Update Package" icon="package">
-
-    Use your package manager to install the latest version.
-
-    <CodeGroup tabs="npm,yarn">
-````bash
-npm update @coterie/core@latest
-````
-````bash
-yarn upgrade @coterie/core@latest
-````
-    </CodeGroup>
-
-  </Step>
-  <Step title="Run Migrations" icon="git-merge">
-
-    Apply database changes if applicable.
-
-````bash
-coterie migrate
-````
-
-  </Step>
-  <Step title="Restart Services" icon="refresh-cw">
-
-    Restart your Coterie instance.
-
-````bash
-systemctl restart coterie
-# or
-docker-compose restart
-````
-
-  </Step>
-</Steps>
+</Update>
 
 ## Next Steps
 
@@ -123,13 +46,13 @@ docker-compose restart
   <Card title="Quickstart" icon="book-open" href="/quickstart">
     Get started with Coterie in minutes.
   </Card>
-  <Card title="API Reference" icon="code" href="/api-reference">
-    Integrate Coterie into your apps.
+  <Card title="Features" icon="settings" href="/features">
+    See everything that's shipped so far.
   </Card>
-  <Card title="Authentication" icon="shield" href="/authentication">
-    Secure your member logins.
+  <Card title="Integrations" icon="plug" href="/integrations">
+    What's connected today, and what's still on the roadmap.
   </Card>
-  <Card title="Guides" icon="help-circle" href="/guides">
-    In-depth usage tutorials.
+  <Card title="Guides" icon="help-circle" href="/help-center/guides/create-your-coterie">
+    Set up your own Coterie.
   </Card>
 </Columns>
