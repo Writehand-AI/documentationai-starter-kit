@@ -188,6 +188,18 @@
               {
                 "title": "What is Coterie?",
                 "path": "help-center/faq/what-is-coterie"
+              },
+              {
+                "title": "Pricing &amp; Plans",
+                "path": "help-center/faq/pricing-and-plans"
+              },
+              {
+                "title": "How Matching Works",
+                "path": "help-center/faq/matching-and-niches"
+              },
+              {
+                "title": "Joining Multiple Coteries",
+                "path": "help-center/faq/multiple-coteries"
               }
             ]
           },
@@ -199,6 +211,18 @@
               {
                 "title": "Cannot Join Coterie",
                 "path": "help-center/troubleshooting/cannot-join-coterie"
+              },
+              {
+                "title": "Can't Submit a Post",
+                "path": "help-center/troubleshooting/missed-assignment"
+              },
+              {
+                "title": "No Party to Join",
+                "path": "help-center/troubleshooting/party-not-showing"
+              },
+              {
+                "title": "Custom Domain Not Working",
+                "path": "help-center/troubleshooting/custom-domain-not-working"
               }
             ]
           },
@@ -208,8 +232,8 @@
             "expandable": false,
             "pages": [
               {
-                "title": "Create Your Coterie",
-                "path": "help-center/guides/create-your-coterie"
+                "title": "Guides Overview",
+                "path": "help-center/guides/overview"
               }
             ]
           }
