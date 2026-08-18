@@ -1,0 +1,148 @@
+---
+title: Quickstart
+description: Guide to signing up and taking the first steps to create your engagement circle.
+---
+
+## Prerequisites
+
+Before you begin, ensure you have:
+
+<Callout kind="info">
+
+- A valid email address for account verification
+- Access to a modern web browser like Chrome, Firefox, or Safari
+- A few minutes to set up your first circle
+
+No credit card required to get started.
+
+</Callout>
+
+## Create Your First Coterie in 4 Steps
+
+Follow these steps to sign up, build your circle, invite members, and launch your first support session. You'll be up and running in under 5 minutes.
+
+<Steps>
+  <Step title="Sign Up and Verify Email" icon="user-plus">
+
+    Visit [https://app.coterie.rsvp/signup](https://app.coterie.rsvp/signup) and enter your email address.
+
+    Click the verification link sent to your inbox. This secures your account and enables core features.
+
+    <Image
+      src="https://www.coterie.rsvp/images/signup-example.png"
+      alt="Signup form with email field"
+      width="600"
+      height="400"
+    />
+
+  </Step>
+
+  <Step title="Build Your First Circle" icon="users">
+
+    From the dashboard, click **New Circle**.
+
+    Enter a name like "Creator Support Group" and add a short description: "Mutual support for content growth."
+
+    Customize settings:
+    - Set session frequency (e.g., weekly)
+    - Define reciprocity rules (e.g., comment on 3 posts per session)
+
+    Click **Create Circle** to save.
+
+  </Step>
+
+  <Step title="Invite Members" icon="mail">
+
+    In your circle dashboard, select **Invite Members**.
+
+    Choose your method:
+
+    <Tabs>
+      <Tab title="Email Invites" icon="mail">
+
+        Enter up to 10 email addresses separated by commas.
+
+        ```
+
+        john@example.com, jane@example.com, alex@example.com
+
+        ```
+
+        Send personalized invites with your circle details.
+
+      </Tab>
+      <Tab title="Shareable Link" icon="link">
+
+        Generate a unique invite link:
+
+        `https://app.coterie.rsvp/join/your-circle-id`
+
+        Share it via social media, DMs, or your newsletter.
+
+        Members sign up automatically upon joining.
+
+      </Tab>
+    </Tabs>
+
+  </Step>
+
+  <Step title="Launch First Support Session" icon="zap">
+
+    Navigate to your circle's **Sessions** tab.
+
+    Click **Start New Session**.
+
+    Review active tasks (e.g., "Support 3 posts from members").
+
+    Mark tasks complete as you engage. Sessions auto-close after 24 hours.
+
+    Monitor reciprocity metrics in real-time.
+
+  </Step>
+</Steps>
+
+<Callout kind="success">
+
+Congratulations! Your first Coterie is live. Watch engagement grow through structured reciprocity.
+
+</Callout>
+
+## Next Steps
+
+Explore these resources to level up your circles:
+
+<Columns cols={2}>
+  <Card title="Manage Circles" icon="settings" href="/docs/circles">
+    Customize rules, schedules, and moderation tools.
+  </Card>
+  <Card title="Best Practices" icon="book-open" href="/docs/guides" horizontal>
+    Tips for high-engagement groups from top creators.
+  </Card>
+  <Card title="Troubleshooting" icon="help-circle" href="/docs/faq">
+    Common issues and quick fixes.
+  </Card>
+  <Card title="Integrations" icon="plug" href="/docs/integrations" horizontal>
+    Connect with social platforms and analytics.
+  </Card>
+</Columns>
+
+<Expandable title="Advanced: Custom Invite via API" default-open="false">
+
+If you're integrating programmatically:
+
+````javascript
+fetch('https://api.coterie.rsvp/v1/circles/YOUR_CIRCLE_ID/invites', {
+  method: 'POST',
+  headers: {
+    'Authorization': 'Bearer YOUR_API_KEY',
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    emails: ['member@example.com']
+  })
+});
+````
+
+</Expandable>
+
+You don’t need everyone. You just need your people. That’s a Coterie. Start building meaningful engagement today.

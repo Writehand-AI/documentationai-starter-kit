@@ -1,0 +1,135 @@
+---
+title: Changelog
+description: Version history with 2-3 recent updates, new features, and changes.
+---
+
+## Recent Updates
+
+<Callout kind="info">
+  Stay up to date with the latest improvements to Coterie. Check this page regularly for new features, bug fixes, and breaking changes.
+</Callout>
+
+<Update label="2024-12-05" description="v1.3.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added advanced community analytics dashboard to track engagement metrics.
+- Introduced reciprocity matching algorithm for better content support suggestions.
+
+## Improvements
+
+- Optimized loading times by `>30%` for member feeds.
+- Enhanced mobile responsiveness for event RSVPs.
+
+## Bug Fixes
+
+- Resolved notification delivery delays.
+- Fixed profile sync issues with external platforms.
+
+</Update>
+
+<Update label="2024-11-15" description="v1.2.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Launched private coterie groups for exclusive content sharing.
+- Integrated real-time comment reciprocity notifications.
+
+## Bug Fixes
+
+- Patched authentication token refresh errors.
+- Corrected RSVP confirmation email failures.
+
+## Improvements
+
+- Streamlined admin dashboard navigation.
+
+</Update>
+
+<Update label="2024-10-20" description="v1.1.0" tags={["feature", "breaking"]}>
+
+## New Features
+
+- Core engagement reciprocity system with structured support flows.
+- Basic member onboarding and group creation tools.
+
+## Breaking Changes
+
+- Updated API endpoints to use `/v2/` prefix. Migrate existing integrations.
+
+## Bug Fixes
+
+- Fixed initial group creation validation.
+
+</Update>
+
+## How to Upgrade
+
+Upgrading Coterie ensures you get the latest features and security patches. Follow these steps to update safely.
+
+<Callout kind="tip">
+  Test upgrades in a staging environment first.
+</Callout>
+
+<Steps>
+  <Step title="Backup Your Data" icon="database">
+
+    Export your communities and member data.
+
+````bash
+coterie-cli backup --output=backup.json
+````
+
+  </Step>
+  <Step title="Update Package" icon="package">
+
+    Use your package manager to install the latest version.
+
+    <CodeGroup tabs="npm,yarn">
+````bash
+npm update @coterie/core@latest
+````
+````bash
+yarn upgrade @coterie/core@latest
+````
+    </CodeGroup>
+
+  </Step>
+  <Step title="Run Migrations" icon="git-merge">
+
+    Apply database changes if applicable.
+
+````bash
+coterie migrate
+````
+
+  </Step>
+  <Step title="Restart Services" icon="refresh-cw">
+
+    Restart your Coterie instance.
+
+````bash
+systemctl restart coterie
+# or
+docker-compose restart
+````
+
+  </Step>
+</Steps>
+
+## Next Steps
+
+<Columns cols={2}>
+  <Card title="Quickstart" icon="book-open" href="/quickstart">
+    Get started with Coterie in minutes.
+  </Card>
+  <Card title="API Reference" icon="code" href="/api-reference">
+    Integrate Coterie into your apps.
+  </Card>
+  <Card title="Authentication" icon="shield" href="/authentication">
+    Secure your member logins.
+  </Card>
+  <Card title="Guides" icon="help-circle" href="/guides">
+    In-depth usage tutorials.
+  </Card>
+</Columns>
