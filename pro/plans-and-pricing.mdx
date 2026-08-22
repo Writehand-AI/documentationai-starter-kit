@@ -1,32 +1,64 @@
 ---
 title: Plans & Pricing
-description: Define paid access tiers for your community.
+description: Charge your own members, on your own Stripe account.
 ---
 
 ## What plans are for
 
-Not every Coterie needs to charge for access, but plenty benefit from it — a paid tier signals commitment, filters for members who are serious, and gives you a way to gate premium content like [Resources](/members/resources) behind a level of investment.
+Not every Coterie needs to charge, but plenty benefit from it. A paid tier signals commitment, filters for members who are serious, and gives you a way to gate deeper access behind a level of investment.
+
+Money goes **directly to you**. Members pay into your own Stripe account, not Coterie's — you are the merchant of record, and your members never see Coterie in the transaction.
+
+## Connecting Stripe
+
+Before you can charge anyone, connect your Stripe account under **Admin → Payments**.
+
+If you already have a Stripe account you can link it. If you don't, you'll create one during the flow. Either way Stripe will ask for real business and bank details and set up two-factor authentication — it's their process, not ours, and it takes a few minutes. Stripe may also hold a new account for review before enabling charges, so don't leave this until the day you launch.
+
+Your Payments page shows **Ready to take payments** once Stripe has verified you. Until then, members can't be charged.
+
+<Callout kind="info">
+  Coterie takes **10% of each member payment on the Pro plan, and 0% on Standard**. Stripe's own processing fees apply on top, as they would with any Stripe account.
+</Callout>
 
 ## Defining a plan
 
-From your admin dashboard, you can define paid tiers with:
+Each plan has a name, a price and interval, an optional short description, a list of features, and a monthly session allowance. You can run up to ten, and mark any of them inactive to hide it from members without deleting it.
 
-- A name and description
-- A price and billing interval
-- The features or access included at that level
+**Sessions per month** is the main entitlement. Leave it blank for unlimited, or set a number to make higher tiers meaningfully different. Usage is counted against the member's own billing period, so cancelling and resubscribing doesn't reset the count.
 
-You can run multiple tiers side by side — a free tier for general members and a paid tier that unlocks deeper resources, priority matching, or whatever else makes sense for your community.
+## How members pay
 
-<Callout kind="warning">
-  Live checkout isn't connected yet — you can fully define your plan structure today, but members can't pay through the app until billing goes live. Plan the tiers now so you're ready the moment it does.
-</Callout>
+Payment happens **after approval**, never before:
+
+1. Someone applies to join
+2. You approve them
+3. They pick a plan and pay
+4. They become a member
+
+You never charge someone you might decline. If you've turned on **Instant access**, the first two steps are skipped and they go straight to picking a plan. See [Joining & Access](/creators/joining-and-access) for the full picture.
+
+Approvals expire after 30 days if the person doesn't complete payment.
+
+## Free tiers alongside paid ones
+
+You can offer a free plan next to paid ones. Someone choosing the free tier joins immediately with no payment step. This tends to work better than making the first interaction a payment decision — let people in, then give them a reason to move up.
 
 ## Structuring tiers well
 
-The strongest plan structures map to something a member can clearly feel the difference of — more resources, better matching priority, access to a smaller inner circle — not just a paywall on the same experience everyone else already gets for free.
+The strongest plan structures map to something a member can clearly feel: more sessions, access to a smaller inner circle, tier-gated [Resources](/members/resources). A paywall on exactly the same experience everyone else gets free is a hard sell, and tends to generate cancellations rather than upgrades.
+
+Two or three tiers is usually plenty. Every extra tier is another decision you're asking someone to make before they've experienced anything.
+
+## Managing payments and refunds
+
+Everything after the sale — payouts, refunds, disputes, invoices — happens in **your own Stripe dashboard**, not in Coterie. That's the trade-off of being the merchant of record: you keep the customer relationship, and you handle the support that comes with it.
 
 <Columns cols={2}>
-  <Card title="Resources" icon="book-open" href="/members/resources">
-    Tier-gated content is one of the most natural things to build a paid plan around.
+  <Card title="Joining & Access" icon="door-open" href="/creators/joining-and-access">
+    How approval and payment fit together.
+  </Card>
+  <Card title="Resources" icon="book-open" href="/members/resources" horizontal>
+    Tier-gated content is a natural thing to build a plan around.
   </Card>
 </Columns>

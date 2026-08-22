@@ -96,6 +96,16 @@
                 "icon": "rocket"
               },
               {
+                "title": "Joining & Access",
+                "path": "creators/joining-and-access",
+                "icon": "door-open"
+              },
+              {
+                "title": "Where Every Setting Lives",
+                "path": "creators/settings-map",
+                "icon": "map"
+              },
+              {
                 "title": "Settings &amp; Party Rules",
                 "path": "creators/settings-and-party-rules",
                 "icon": "sliders"

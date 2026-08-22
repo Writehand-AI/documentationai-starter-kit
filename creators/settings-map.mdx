@@ -1,0 +1,70 @@
+---
+title: Where Every Setting Lives
+description: A map of the admin area, so you can find the switch you're looking for.
+---
+
+## How the admin area is organised
+
+Everything is reached from **Admin**, which is the single hub for running your Coterie. Within it, **Main settings** holds five tabs, ordered the way you'd actually set a Coterie up: what it looks like, how people find it, how they get in, how it runs, and what your public page says.
+
+## Main settings
+
+### Branding
+
+Your identity. Account name and URL slug, brand name, tagline, logo, square logo icon, and accent colour.
+
+<Callout kind="info">
+  The **accent colour** here overrides the Primary colour on the Theme page. If you set a colour on Theme and it doesn't seem to apply, this is why — the accent wins.
+</Callout>
+
+### Discovery
+
+Whether people can find you, and what they see when they do. **List in Discover** is the master switch: Public puts you in the directory, Private keeps you out of it entirely.
+
+The rest fills in your directory card — cover image, About description, category, location, country, format, and cadence. Format and cadence also appear on your public Title Page if you've enabled its stats row.
+
+### Joining & Access
+
+How people get in: **Open join**, **Instant access**, and the questions on your apply page. This is also where paid membership requirements appear once you've set up plans. See [Joining & Access](/creators/joining-and-access) for how the switches interact.
+
+### Sessions & Rules
+
+How the community actually runs. Niche matching, allowed content channels, circle rotation, competitor exclusion, strike threshold, content policy, and session notification and reminder settings.
+
+### Title Page
+
+Your public page at `/c/your-slug` — headline, body, media gallery, footer links, and whether it's published. Unpublished, that URL falls back to a plain apply form.
+
+## Elsewhere in Admin
+
+| Where | What's there |
+|---|---|
+| **Applications** | Review, approve and decline people who applied |
+| **Sessions** | Schedule sessions, group members into circles, Capacity Advisor |
+| **Members** | Your roster — search, filter, see participation |
+| **Coterie health** | Participation, retention, who's gone quiet |
+| **Theme** | Fonts, corner radius, and the full colour palette including the sidebar |
+| **Custom menu** | Your own links in the member sidebar |
+| **Payments** | What your members pay **you** — plans and Stripe Connect |
+| **Subscription** | What you pay **Coterie** — your Standard or Pro plan |
+| **Reports** | Flagged posts and commenters |
+| **API** and **Logs** | Keys, usage, and your audit trail |
+
+### Pro only
+
+**Forms**, **Staff access** (co-admins and moderators), **Assistant**, **Email** (your own SMTP and email wording), **White-label & Domain**, and **AI** (bring your own OpenAI key).
+
+## Two things that catch people out
+
+**Payments and Subscription are different things.** Payments is money flowing *to* you from your members. Subscription is money flowing *from* you to Coterie for the platform. They sit next to each other in Admin and the names are easy to swap.
+
+**Branding, Theme and White-label all affect how things look.** Branding is your logo and accent colour. Theme is the full palette, fonts and corner radius. White-label (Pro) is favicon, page title and description, plus hiding Coterie's own navigation. If an appearance change isn't showing up, check whether another surface is overriding it.
+
+<Columns cols={2}>
+  <Card title="Joining & Access" icon="door-open" href="/creators/joining-and-access">
+    The switches that decide who gets in.
+  </Card>
+  <Card title="Creating Your Coterie" icon="rocket" href="/creators/creating-your-coterie" horizontal>
+    Start here if you haven't set one up yet.
+  </Card>
+</Columns>
