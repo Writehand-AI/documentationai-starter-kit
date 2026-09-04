@@ -55,7 +55,7 @@
                 "icon": "link"
               },
               {
-                "title": "Assignments &amp; Reciprocity",
+                "title": "Reviews &amp; Participation",
                 "path": "members/assignments-and-reciprocity",
                 "icon": "repeat"
               },
@@ -134,6 +134,11 @@
                 "title": "Community Health",
                 "path": "creators/community-health",
                 "icon": "activity"
+              },
+              {
+                "title": "Community Participation Guidelines",
+                "path": "community-participation-guidelines",
+                "icon": "shield-check"
               }
             ]
           },
