@@ -284,6 +284,10 @@
         {
           "title": "Login",
           "link": "https://app.coterie.rsvp/login"
+        },
+        {
+          "title": "Register",
+          "link": "https://app.coterie.rsvp/register"
         }
       ]
     }
