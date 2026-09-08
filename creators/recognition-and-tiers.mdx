@@ -1,0 +1,100 @@
+---
+title: Recognition & Tiers
+description: Turn recognition on or off, rename the tiers, set what they cost, attach a perk, and decide what members can earn.
+---
+
+Recognition is what your Coterie says back to a member who keeps showing up: a contribution score, a tier, a streak, a badge. All of it is derived from what actually happened in your sessions — nothing is granted by hand, and nothing can be awarded for activity outside Coterie.
+
+Everything on this page lives in **Admin → Recognition**.
+
+## The master switch
+
+Recognition is **on** by default. Turn it off and members stop seeing contribution scores, tiers, streaks, badges and the leaderboard entirely.
+
+Turning it off doesn't delete anything. The ledger keeps recording, so if you turn it back on months later everyone's history is intact and their tier is whatever they'd have reached. It's a display switch, not a reset.
+
+<Callout kind="note">
+  Reliability is separate and always on. It's the signal you use to judge who's dependable when matching people, so it isn't part of the recognition switch.
+</Callout>
+
+## The leaderboard
+
+The circle leaderboard can be hidden independently. Some communities want the recognition without the ranking — visible scores, no table putting members in order.
+
+Hidden means hidden from members. You still see it in your admin views either way.
+
+## What a session is worth
+
+Five numbers decide what members earn. The defaults are tuned so that a member turning up weekly and finishing everything reaches the top tier in roughly a year.
+
+| Setting | Default | What it does |
+| --- | --- | --- |
+| Review pool | 20 | Shared across a session's reviews, in proportion to how many you complete |
+| Session completed | 25 | Bonus for finishing every review you were assigned |
+| Streak continued | 3 | Added for each consecutive session after the first |
+| Reliability 90% | 15 | Monthly award for holding 90%+ |
+| Reliability 95% | 25 | Monthly award for holding 95%+ |
+
+The review pool is a **pool**, not a rate per review. A session is worth the same whether a circle has three people in it or ten, so nobody is better off for being in a bigger room — and you can change circle size without quietly changing what a session pays.
+
+Each value can go up to 1000. Anything outside the range is clamped rather than rejected, so a bad number can't reach the scoring engine.
+
+<Callout kind="warning">
+  Changing weights applies to **future** sessions only. Points are recorded as they were earned, so a change never rewrites what a member already did. This is on purpose — retroactive scoring would move people's tiers underneath them.
+</Callout>
+
+## Tiers
+
+There are five, and you control the name and the threshold of each.
+
+| Tier | Default name | Default threshold |
+| --- | --- | --- |
+| 1 | Member | 0 |
+| 2 | Regular | 150 |
+| 3 | Contributor | 600 |
+| 4 | Pillar | 1400 |
+| 5 | Steward | 2600 |
+
+Rename them to fit your community — cohort names, belt colours, whatever your members would recognise. The count is fixed at five.
+
+Unlike points, tiers are worked out from a member's running total every time it's read rather than stored. So if you lower a threshold, everyone who already qualifies moves up immediately. There's no recalculation to run and no backfill to wait for.
+
+## Tier perks
+
+Each tier can carry one perk — a title, a short description, and optionally a link. A resource, a call, access to something you only open to members who've earned it.
+
+- Title: up to 60 characters
+- Description: up to 200 characters
+- Link: optional, and must be `https`
+
+A tier with no perk title shows nothing at all on a member's dashboard, rather than an empty box. Leave the ones you don't use blank.
+
+<Callout kind="tip">
+  Perks are the part members respond to most, and the part most owners leave empty. Even one — something small attached to tier 2 — changes how the ladder reads, because it turns a number into a reason.
+</Callout>
+
+## What you can't change
+
+Deliberately fixed, so recognition means the same thing across the platform:
+
+- **The badges.** All eleven, and what earns them, are the same in every Coterie. You can't add, remove, rename or hand-award one. A member who moves between Coteries keeps a badge that still means what it meant. The full list is on the [members' page](/members/recognition-and-reliability).
+- **The reliability bands.** 90% and 95%, over a minimum of five assigned reviews in the month. You set what the awards are worth, not where the bands sit.
+- **The number of tiers.** Five.
+- **What counts at all.** Contribution comes from reviewing other members' work and finishing what you took on. It can never be earned for likes, comments, shares or follows on an external platform, and there's no setting that changes that.
+
+## The monthly awards
+
+Reliability awards are worked out once a month, per member, from the reviews that fell due in that month. A member needs at least five assigned reviews for the month to count — below that there isn't enough to judge, and no award is made either way.
+
+The bands don't stack. 96% earns the 95% award, not both.
+
+This runs automatically. You don't need to trigger anything, and re-running it can't double-pay a member.
+
+<Columns cols={2}>
+  <Card title="Community Health" icon="activity" href="/creators/community-health">
+    Reading reliability across your whole Coterie.
+  </Card>
+  <Card title="Where Every Setting Lives" icon="map" href="/creators/settings-map" horizontal>
+    The full map of admin settings.
+  </Card>
+</Columns>

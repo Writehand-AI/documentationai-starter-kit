@@ -115,6 +115,11 @@
                 "icon": "sliders"
               },
               {
+                "title": "Recognition & Tiers",
+                "path": "creators/recognition-and-tiers",
+                "icon": "award"
+              },
+              {
                 "title": "Managing Niches",
                 "path": "creators/managing-niches",
                 "icon": "layers"
