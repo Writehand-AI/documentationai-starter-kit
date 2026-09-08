@@ -292,5 +292,10 @@
     "page-actions": []
   },
   "title": "Coterie | Documentation",
-  "description": "Documentation for Coterie Users | Launchpad for loyal audiences"
+  "description": "Documentation for Coterie Users | Launchpad for loyal audiences",
+  "customCss": [
+    {
+      "src": "styles/double-borders.css"
+    }
+  ]
 }

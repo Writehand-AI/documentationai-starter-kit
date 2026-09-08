@@ -1,0 +1,49 @@
+/* Productised double-border — mirrors the app card style.
+   Loaded after the Documentation.ai theme so these override defaults. */
+
+:root {
+  --pd-double-border:
+    inset 0 0 0 0.5px rgba(209, 213, 219, 0.30),
+    0 0 0 3.5px #f8f8f8,
+    0 0 0 4px rgba(209, 213, 219, 0.40),
+    0 4px 16px rgba(0, 0, 0, 0.06);
+  --pd-ring: rgba(209, 213, 219, 0.55);   /* outer ring */
+  --pd-hover: rgba(148, 163, 184, 0.75);  /* light grey hover (was black) */
+  --pd-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* Dark mode (Documentation.ai toggles .dark on <html>) */
+html.dark {
+  --pd-double-border:
+    inset 0 0 0 0.5px rgba(255, 255, 255, 0.08),
+    0 0 0 3.5px rgba(255, 255, 255, 0.04),
+    0 0 0 4px rgba(255, 255, 255, 0.12),
+    0 4px 16px rgba(0, 0, 0, 0.45);
+  --pd-ring: rgba(255, 255, 255, 0.14);
+  --pd-hover: rgba(255, 255, 255, 0.28);
+  --pd-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+}
+
+/* ── Main content panel ───────────────────────────────── */
+.dai-content-card {
+  box-shadow: var(--pd-double-border) !important;
+}
+
+/* ── Cards (Documentation.ai <Card>) ──────────────────────
+   Target ONLY the card box — the single element that carries the
+   `border-border-muted` class AND contains a card title. Inner
+   wrapper divs don't have that class, so no stray inner lines.
+   Uses outline + offset (renders outside overflow-hidden, unlike
+   box-shadow) to draw the outer ring of the double border. */
+[class*="border-border-muted"]:has(.dai-card-title) {
+  outline: 1px solid var(--pd-ring) !important;
+  outline-offset: 3px !important;
+  box-shadow: var(--pd-shadow) !important;
+  transition: border-color 0.15s ease, outline-color 0.15s ease !important;
+}
+
+/* Hover: light grey, not black (overrides hover:border-heading) */
+[class*="border-border-muted"]:has(.dai-card-title):hover {
+  border-color: var(--pd-hover) !important;
+  outline-color: var(--pd-hover) !important;
+}
