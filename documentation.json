@@ -1,5 +1,5 @@
 {
-  "name": "Coterie",
+  "name": "Coterie | Documentation",
   "colors": {
     "light": {
       "brand": "#4c2806",
@@ -287,5 +287,10 @@
         }
       ]
     }
-  }
+  },
+  "ai": {
+    "page-actions": []
+  },
+  "title": "Coterie | Documentation",
+  "description": "Documentation for Coterie Users | Launchpad for loyal audiences"
 }
