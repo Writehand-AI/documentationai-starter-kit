@@ -288,6 +288,10 @@
         {
           "title": "Register",
           "link": "https://app.coterie.rsvp/register"
+        },
+        {
+          "title": "Contact",
+          "link": "https://www.coterie.rsvp/contact"
         }
       ]
     }
