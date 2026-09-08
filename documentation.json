@@ -2,10 +2,14 @@
   "name": "Coterie",
   "colors": {
     "light": {
-      "brand": "#4c2806"
+      "brand": "#4c2806",
+      "heading": "#b8e4ff",
+      "text": "#3e4146"
     },
     "dark": {
-      "brand": "#EDA45E"
+      "brand": "#EDA45E",
+      "heading": "#f2f2f2",
+      "text": "#c1c1c1"
     }
   },
   "navigation": {
@@ -55,12 +59,12 @@
                 "icon": "link"
               },
               {
-                "title": "Reviews &amp; Participation",
+                "title": "Reviews & Participation",
                 "path": "members/assignments-and-reciprocity",
                 "icon": "repeat"
               },
               {
-                "title": "Recognition &amp; Reliability",
+                "title": "Recognition & Reliability",
                 "path": "members/recognition-and-reliability",
                 "icon": "star"
               },
@@ -106,7 +110,7 @@
                 "icon": "map"
               },
               {
-                "title": "Settings &amp; Party Rules",
+                "title": "Settings & Circle Rules",
                 "path": "creators/settings-and-party-rules",
                 "icon": "sliders"
               },
@@ -126,7 +130,7 @@
                 "icon": "inbox"
               },
               {
-                "title": "Moderation &amp; Reports",
+                "title": "Moderation & Reports",
                 "path": "creators/moderation-and-reports",
                 "icon": "shield"
               },
@@ -143,11 +147,11 @@
             ]
           },
           {
-            "group": "White-Label &amp; Pro",
+            "group": "White-Label & Pro Users",
             "icon": "palette",
             "pages": [
               {
-                "title": "Branding &amp; White-Label",
+                "title": "Branding & White-Label",
                 "path": "pro/branding-and-white-label",
                 "icon": "palette"
               },
@@ -157,7 +161,7 @@
                 "icon": "globe"
               },
               {
-                "title": "Plans &amp; Pricing",
+                "title": "Plans & Pricing",
                 "path": "pro/plans-and-pricing",
                 "icon": "tag"
               },
@@ -205,7 +209,7 @@
                 "path": "help-center/faq/what-is-coterie"
               },
               {
-                "title": "Pricing &amp; Plans",
+                "title": "Pricing & Plans",
                 "path": "help-center/faq/pricing-and-plans"
               },
               {
@@ -269,5 +273,19 @@
   },
   "favicon": "https://blob-cdn.documentation.ai/org-708d97b3-a195-4b0f-8911-093c012c99d6/doc-fb3557a6-d141-4de6-952b-fdd32471e5cd/1787038889294-vem438givn-coterielogo.svg?rasterize-bypass=true",
   "logo-light": "https://blob-cdn.documentation.ai/org-708d97b3-a195-4b0f-8911-093c012c99d6/doc-fb3557a6-d141-4de6-952b-fdd32471e5cd/1787038917308-v1lsw3rgjda-coteriewordmark.svg?rasterize-bypass=true",
-  "template": "atlas"
+  "template": "atlas",
+  "navbar": {
+    "actions": {
+      "primary": {
+        "title": "Back to Website",
+        "link": "https://www.coterie.rsvp/"
+      },
+      "links": [
+        {
+          "title": "Login",
+          "link": "https://app.coterie.rsvp/login"
+        }
+      ]
+    }
+  }
 }
