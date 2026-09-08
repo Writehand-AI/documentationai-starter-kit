@@ -3,11 +3,11 @@
   "colors": {
     "light": {
       "brand": "#4c2806",
-      "heading": "#b8e4ff",
+      "heading": "#5cc0ff",
       "text": "#3e4146"
     },
     "dark": {
-      "brand": "#EDA45E",
+      "brand": "#7ac6ff",
       "heading": "#f2f2f2",
       "text": "#c1c1c1"
     }
