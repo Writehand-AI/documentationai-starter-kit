@@ -166,6 +166,11 @@
                 "icon": "globe"
               },
               {
+                "title": "Forms & Collections",
+                "path": "pro/forms-and-collections",
+                "icon": "layers"
+              },
+              {
                 "title": "Plans & Pricing",
                 "path": "pro/plans-and-pricing",
                 "icon": "tag"

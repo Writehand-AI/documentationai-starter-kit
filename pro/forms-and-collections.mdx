@@ -1,0 +1,99 @@
+---
+title: Forms & Collections
+description: Build forms for your members, control who can open them, and group them into sets people can browse.
+---
+
+Forms let you put a real tool in front of your members — an intake form, a questionnaire, a calculator, an application. Collections group several of them into a set, so you present a toolkit rather than a list.
+
+Both are **Pro features**. You'll find them in **Settings → Forms**.
+
+## Who can open a form
+
+This is the setting worth getting right first, and it's on each form's **Settings** tab under **Who can open it**.
+
+| Option | What it means |
+| --- | --- |
+| Members only | Only signed-in members of *this* Coterie. The link still works — it asks them to sign in first. |
+| Anyone with the link | Anyone at all, signed in or not. |
+
+**Members only is the default**, and it's enforced on the form itself rather than by hiding a link. Someone who isn't a member gets a not-found page even if a member forwards them the URL.
+
+<Callout kind="note">
+  "Anyone with the link" exists for one good reason: a form is a natural way to bring *new* people in. An application, a waitlist, an enquiry form — none of those can require membership, because the person filling it in isn't a member yet.
+</Callout>
+
+<Callout kind="warning">
+  A form's own setting always wins. Putting a public form inside a collection does not make it members-only, and the collection's settings page tells you which of its forms are open to anyone so you find out there rather than afterwards.
+</Callout>
+
+## The card
+
+Wherever a form appears as a tile — in a collection, or in your members' menu — it shows a **name, one line, and an icon**. That's the **Card** tab on each form.
+
+- **Description** — up to 140 characters. Leave it blank and the card shows just the title.
+- **Icon** — one of twenty. It takes the colour of that form's own theme, so you pick an icon and see the colour it will actually be.
+
+The Card tab shows a live preview using the same component your members see, so what you approve is what they get.
+
+<Callout kind="tip">
+  This used to sit inside the form builder. It moved because it isn't part of *building* the form — it's how the finished form is presented. It also means there's exactly one place to change it.
+</Callout>
+
+## Collections
+
+A collection is a named group of your forms. Create one from **Settings → Forms** — either the **Add collection** button under the forms table, or **Add collection** in the **Create Form** dropdown.
+
+Each collection has:
+
+- A **name**, **description** and **icon**, from the same twenty icons a form uses
+- The **forms in it**, in the order you choose
+- A **Members can see it** switch
+
+### Members can see it
+
+Off by default. Most people assemble a collection over a few sittings, and an empty or half-built collection isn't something you want members browsing in the meantime. Turn it on when it's ready.
+
+### A form can be in more than one collection
+
+Deliberately. You'll often want several collections that differ by which forms they hold, and duplicating a form just to reuse it would be worse than letting one form appear in two places.
+
+The cost is that editing one collection can change what another shows. So each form in the list tells you where else it appears — *"Also in Client onboarding, Templates"* — and the picker says how many collections a form is already in before you add it.
+
+<Callout kind="note">
+  A form appears at most once *inside* a given collection, and only **published** forms can be added. A draft or closed form would be a dead end for a member, so it isn't offered.
+</Callout>
+
+### Ordering
+
+Both the collections themselves and the forms inside each one use up and down arrows. The order you set is the order members see.
+
+## What members see
+
+Collections appear under **Resources** in every member's sidebar, above any custom links you've added. Opening one shows its forms as cards, four to a row on a wide screen and fewer as the space narrows.
+
+A collection only ever lists forms a member can actually open, so it never advertises four tools and then shows two. If every form in a collection has since been unpublished, members are told it's empty rather than shown a blank panel.
+
+## Deleting a collection
+
+Deleting a collection deletes **the grouping only**. Every form inside it survives and keeps working — on its own URL, in your custom menu, and in any other collection it belongs to.
+
+The confirmation says so, and names how many forms are affected, because it's the kind of thing worth being certain about before clicking.
+
+## What forms and collections deliberately don't do
+
+Coterie is not an embed platform, and this is a decision rather than a gap:
+
+- **No embedding on other websites.** There are no embed keys and no allowed-domain list to maintain. Forms and collections live inside your Coterie.
+- **No separate domain.** A form inherits whatever domain your Coterie already uses, including a custom one.
+- **No public collections.** A collection is a members' area surface. If you want something reachable by anyone, that's a form set to "Anyone with the link".
+
+The reason is that Coterie knows who your members *are*. Membership is a stronger control than checking which website is framing a page, and it doesn't need a list of URLs kept up to date.
+
+<Columns cols={2}>
+  <Card title="Plans &amp; Pricing" icon="tag" href="/pro/plans-and-pricing">
+    How paid member plans are structured.
+  </Card>
+  <Card title="Where Every Setting Lives" icon="map" href="/creators/settings-map" horizontal>
+    The full map of admin settings.
+  </Card>
+</Columns>
