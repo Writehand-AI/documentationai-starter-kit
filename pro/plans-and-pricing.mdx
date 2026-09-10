@@ -23,9 +23,31 @@ Your Payments page shows **Ready to take payments** once Stripe has verified you
 
 ## Defining a plan
 
-Each plan has a name, a price and interval, an optional short description, a list of features, and a monthly session allowance. You can run up to ten, and mark any of them inactive to hide it from members without deleting it.
+Each plan has a name, a price and interval, an optional short description, and a list of selling points. You can run up to ten, and mark any of them inactive to hide it from members without deleting it.
 
-**Sessions per month** is the main entitlement. Leave it blank for unlimited, or set a number to make higher tiers meaningfully different. Usage is counted against the member's own billing period, so cancelling and resubscribing doesn't reset the count.
+## What a plan includes
+
+Three things a plan actually delivers, as opposed to the selling points, which are printed on your pricing page and enforce nothing:
+
+| | What it does |
+| --- | --- |
+| **Sessions per month** | How many engagement sessions a member can join. Blank = unlimited. |
+| **Collections this plan unlocks** | Which sets of tools the plan buys access to. Tick as many as you like. |
+| **Assistant messages per month** | Per member. Blank falls back to your Coterie-wide default. |
+
+The last two are **Pro features**, so they only appear if your Coterie is on Pro — a Standard Coterie has neither collections nor an assistant to include.
+
+<Callout kind="warning">
+  A collection ticked on **no plan at all** is open to every member. Empty is not locked. If you want to charge for a collection, it has to appear on at least one plan.
+</Callout>
+
+### The two allowances count differently, on purpose
+
+**Sessions** are counted against the member's own billing period.
+
+**Assistant messages** are counted per calendar month instead. The reason is that a member cancelling and resubscribing starts a *new* subscription with a new billing period — so a period-based count would start again. On a paid plan that's just buying more, which is fine. On a **free** plan it would be an unlimited reset for nothing, and the assistant runs on your own API key. A calendar month is a window nobody can move.
+
+The practical upshot: a member upgrading mid-month gets the higher ceiling applied to what they've already used, rather than a fresh start.
 
 ## How members pay
 
@@ -44,9 +66,13 @@ Approvals expire after 30 days if the person doesn't complete payment.
 
 You can offer a free plan next to paid ones. Someone choosing the free tier joins immediately with no payment step. This tends to work better than making the first interaction a payment decision — let people in, then give them a reason to move up.
 
+A free plan can unlock collections and carry an assistant allowance like any other. "Has a plan" and "has paid" are different things here, and that's deliberate — a free tier that includes the basics is often the thing that makes the paid tier legible.
+
+Members on **no plan at all** still get an assistant allowance: the Coterie-wide default in **Admin → Assistant**. Leaving that blank means unlimited, which on your own API key is worth a moment's thought.
+
 ## Structuring tiers well
 
-The strongest plan structures map to something a member can clearly feel: more sessions, access to a smaller inner circle, tier-gated [Resources](/members/resources). A paywall on exactly the same experience everyone else gets free is a hard sell, and tends to generate cancellations rather than upgrades.
+The strongest plan structures map to something a member can clearly feel: more sessions, a collection of tools they actually want, more room with the assistant, access to a smaller inner circle. A paywall on exactly the same experience everyone else gets free is a hard sell, and tends to generate cancellations rather than upgrades.
 
 Two or three tiers is usually plenty. Every extra tier is another decision you're asking someone to make before they've experienced anything.
 
