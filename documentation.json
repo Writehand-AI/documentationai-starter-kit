@@ -13,269 +13,114 @@
     }
   },
   "navigation": {
-    "tabs": [
+    "languages": [
       {
-        "tab": "Documentation",
-        "icon": "book",
-        "groups": [
+        "language": "English",
+        "icon": "languages",
+        "tabs": [
           {
-            "group": "Getting Started",
-            "icon": "rocket",
-            "pages": [
+            "tab": "Documentation",
+            "icon": "book",
+            "groups": [
               {
-                "title": "What is Coterie?",
-                "path": "introduction",
-                "icon": "star"
+                "group": "Getting Started",
+                "icon": "rocket",
+                "pages": [
+                  { "title": "What is Coterie?", "path": "introduction", "icon": "star" },
+                  { "title": "How it Works", "path": "how-it-works", "icon": "repeat" },
+                  { "title": "Platform Features", "path": "features", "icon": "grid" },
+                  { "title": "Quick Start", "path": "quickstart", "icon": "zap" }
+                ]
               },
               {
-                "title": "How it Works",
-                "path": "how-it-works",
-                "icon": "repeat"
+                "group": "For Members",
+                "icon": "users",
+                "pages": [
+                  { "title": "Joining", "path": "members/joining", "icon": "log-in" },
+                  { "title": "Submitting Posts", "path": "members/submitting-posts", "icon": "link" },
+                  { "title": "Reviews & Participation", "path": "members/assignments-and-reciprocity", "icon": "repeat" },
+                  { "title": "Recognition & Reliability", "path": "members/recognition-and-reliability", "icon": "star" },
+                  { "title": "Niches", "path": "members/niches", "icon": "layers" },
+                  { "title": "Resources", "path": "members/resources", "icon": "book-open" },
+                  { "title": "Discover", "path": "members/discover", "icon": "compass" },
+                  { "title": "Coterie Assistant", "path": "members/coterie-assistant", "icon": "sparkles" }
+                ]
               },
               {
-                "title": "Platform Features",
-                "path": "features",
-                "icon": "grid"
+                "group": "For Creators",
+                "icon": "rocket",
+                "pages": [
+                  { "title": "Creating Your Coterie", "path": "creators/creating-your-coterie", "icon": "rocket" },
+                  { "title": "Joining & Access", "path": "creators/joining-and-access", "icon": "door-open" },
+                  { "title": "Where Every Setting Lives", "path": "creators/settings-map", "icon": "map" },
+                  { "title": "Settings & Circle Rules", "path": "creators/settings-and-party-rules", "icon": "sliders" },
+                  { "title": "Recognition & Tiers", "path": "creators/recognition-and-tiers", "icon": "award" },
+                  { "title": "Managing Niches", "path": "creators/managing-niches", "icon": "layers" },
+                  { "title": "Scheduling Parties", "path": "creators/scheduling-parties", "icon": "calendar" },
+                  { "title": "Reviewing Applications", "path": "creators/reviewing-applications", "icon": "inbox" },
+                  { "title": "Moderation & Reports", "path": "creators/moderation-and-reports", "icon": "shield" },
+                  { "title": "Community Health", "path": "creators/community-health", "icon": "activity" },
+                  { "title": "Community Participation Guidelines", "path": "community-participation-guidelines", "icon": "shield-check" }
+                ]
               },
               {
-                "title": "Quick Start",
-                "path": "quickstart",
-                "icon": "zap"
+                "group": "White-Label & Pro Users",
+                "icon": "palette",
+                "pages": [
+                  { "title": "Branding & White-Label", "path": "pro/branding-and-white-label", "icon": "palette" },
+                  { "title": "Custom Domains", "path": "pro/custom-domains", "icon": "globe" },
+                  { "title": "Forms & Collections", "path": "pro/forms-and-collections", "icon": "layers" },
+                  { "title": "Plans & Pricing", "path": "pro/plans-and-pricing", "icon": "tag" },
+                  { "title": "Email Customization", "path": "pro/email-customization", "icon": "mail" },
+                  { "title": "AI Assistant Setup", "path": "pro/ai-assistant-setup", "icon": "cpu" }
+                ]
+              },
+              {
+                "group": "Guides",
+                "icon": "compass",
+                "pages": [{ "title": "Integrations", "path": "integrations", "icon": "plug" }]
               }
             ]
           },
           {
-            "group": "For Members",
-            "icon": "users",
-            "pages": [
-              {
-                "title": "Joining",
-                "path": "members/joining",
-                "icon": "log-in"
-              },
-              {
-                "title": "Submitting Posts",
-                "path": "members/submitting-posts",
-                "icon": "link"
-              },
-              {
-                "title": "Reviews & Participation",
-                "path": "members/assignments-and-reciprocity",
-                "icon": "repeat"
-              },
-              {
-                "title": "Recognition & Reliability",
-                "path": "members/recognition-and-reliability",
-                "icon": "star"
-              },
-              {
-                "title": "Niches",
-                "path": "members/niches",
-                "icon": "layers"
-              },
-              {
-                "title": "Resources",
-                "path": "members/resources",
-                "icon": "book-open"
-              },
-              {
-                "title": "Discover",
-                "path": "members/discover",
-                "icon": "compass"
-              },
-              {
-                "title": "Coterie Assistant",
-                "path": "members/coterie-assistant",
-                "icon": "sparkles"
-              }
-            ]
-          },
-          {
-            "group": "For Creators",
-            "icon": "rocket",
-            "pages": [
-              {
-                "title": "Creating Your Coterie",
-                "path": "creators/creating-your-coterie",
-                "icon": "rocket"
-              },
-              {
-                "title": "Joining & Access",
-                "path": "creators/joining-and-access",
-                "icon": "door-open"
-              },
-              {
-                "title": "Where Every Setting Lives",
-                "path": "creators/settings-map",
-                "icon": "map"
-              },
-              {
-                "title": "Settings & Circle Rules",
-                "path": "creators/settings-and-party-rules",
-                "icon": "sliders"
-              },
-              {
-                "title": "Recognition & Tiers",
-                "path": "creators/recognition-and-tiers",
-                "icon": "award"
-              },
-              {
-                "title": "Managing Niches",
-                "path": "creators/managing-niches",
-                "icon": "layers"
-              },
-              {
-                "title": "Scheduling Parties",
-                "path": "creators/scheduling-parties",
-                "icon": "calendar"
-              },
-              {
-                "title": "Reviewing Applications",
-                "path": "creators/reviewing-applications",
-                "icon": "inbox"
-              },
-              {
-                "title": "Moderation & Reports",
-                "path": "creators/moderation-and-reports",
-                "icon": "shield"
-              },
-              {
-                "title": "Community Health",
-                "path": "creators/community-health",
-                "icon": "activity"
-              },
-              {
-                "title": "Community Participation Guidelines",
-                "path": "community-participation-guidelines",
-                "icon": "shield-check"
-              }
-            ]
-          },
-          {
-            "group": "White-Label & Pro Users",
-            "icon": "palette",
-            "pages": [
-              {
-                "title": "Branding & White-Label",
-                "path": "pro/branding-and-white-label",
-                "icon": "palette"
-              },
-              {
-                "title": "Custom Domains",
-                "path": "pro/custom-domains",
-                "icon": "globe"
-              },
-              {
-                "title": "Forms & Collections",
-                "path": "pro/forms-and-collections",
-                "icon": "layers"
-              },
-              {
-                "title": "Plans & Pricing",
-                "path": "pro/plans-and-pricing",
-                "icon": "tag"
-              },
-              {
-                "title": "Email Customization",
-                "path": "pro/email-customization",
-                "icon": "mail"
-              },
-              {
-                "title": "AI Assistant Setup",
-                "path": "pro/ai-assistant-setup",
-                "icon": "cpu"
-              }
-            ]
-          },
-          {
-            "group": "Guides",
-            "icon": "compass",
-            "pages": [
-              {
-                "title": "Integrations",
-                "path": "integrations",
-                "icon": "plug"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Help Center",
-        "icon": "help-circle",
-        "pages": [
-          {
-            "title": "Help Center",
-            "path": "help-center",
-            "icon": "home"
-          },
-          {
-            "group": "FAQs",
+            "tab": "Help Center",
             "icon": "help-circle",
-            "expandable": false,
             "pages": [
+              { "title": "Help Center", "path": "help-center", "icon": "home" },
               {
-                "title": "What is Coterie?",
-                "path": "help-center/faq/what-is-coterie"
+                "group": "FAQs",
+                "icon": "help-circle",
+                "expandable": false,
+                "pages": [
+                  { "title": "What is Coterie?", "path": "help-center/faq/what-is-coterie" },
+                  { "title": "Pricing & Plans", "path": "help-center/faq/pricing-and-plans" },
+                  { "title": "How Matching Works", "path": "help-center/faq/matching-and-niches" },
+                  { "title": "Joining Multiple Coteries", "path": "help-center/faq/multiple-coteries" }
+                ]
               },
               {
-                "title": "Pricing & Plans",
-                "path": "help-center/faq/pricing-and-plans"
+                "group": "Troubleshooting",
+                "icon": "alert-triangle",
+                "expandable": false,
+                "pages": [
+                  { "title": "Cannot Join Coterie", "path": "help-center/troubleshooting/cannot-join-coterie" },
+                  { "title": "Can't Submit a Post", "path": "help-center/troubleshooting/missed-assignment" },
+                  { "title": "No Party to Join", "path": "help-center/troubleshooting/party-not-showing" },
+                  { "title": "Custom Domain Not Working", "path": "help-center/troubleshooting/custom-domain-not-working" }
+                ]
               },
               {
-                "title": "How Matching Works",
-                "path": "help-center/faq/matching-and-niches"
-              },
-              {
-                "title": "Joining Multiple Coteries",
-                "path": "help-center/faq/multiple-coteries"
+                "group": "Guides",
+                "icon": "book-open",
+                "expandable": false,
+                "pages": [{ "title": "Guides Overview", "path": "help-center/guides/overview" }]
               }
             ]
           },
           {
-            "group": "Troubleshooting",
-            "icon": "alert-triangle",
-            "expandable": false,
-            "pages": [
-              {
-                "title": "Cannot Join Coterie",
-                "path": "help-center/troubleshooting/cannot-join-coterie"
-              },
-              {
-                "title": "Can't Submit a Post",
-                "path": "help-center/troubleshooting/missed-assignment"
-              },
-              {
-                "title": "No Party to Join",
-                "path": "help-center/troubleshooting/party-not-showing"
-              },
-              {
-                "title": "Custom Domain Not Working",
-                "path": "help-center/troubleshooting/custom-domain-not-working"
-              }
-            ]
-          },
-          {
-            "group": "Guides",
-            "icon": "book-open",
-            "expandable": false,
-            "pages": [
-              {
-                "title": "Guides Overview",
-                "path": "help-center/guides/overview"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Changelog",
-        "icon": "clock",
-        "pages": [
-          {
-            "title": "Release History",
-            "path": "changelog",
-            "icon": "history"
+            "tab": "Changelog",
+            "icon": "clock",
+            "pages": [{ "title": "Release History", "path": "changelog", "icon": "history" }]
           }
         ]
       }
@@ -286,34 +131,16 @@
   "template": "atlas",
   "navbar": {
     "actions": {
-      "primary": {
-        "title": "Back to Website",
-        "link": "https://www.coterie.rsvp/"
-      },
+      "primary": { "title": "Back to Website", "link": "https://www.coterie.rsvp/" },
       "links": [
-        {
-          "title": "Login",
-          "link": "https://app.coterie.rsvp/login"
-        },
-        {
-          "title": "Register",
-          "link": "https://app.coterie.rsvp/register"
-        },
-        {
-          "title": "Contact",
-          "link": "https://www.coterie.rsvp/contact"
-        }
+        { "title": "Login", "link": "https://app.coterie.rsvp/login" },
+        { "title": "Register", "link": "https://app.coterie.rsvp/register" },
+        { "title": "Contact", "link": "https://www.coterie.rsvp/contact" }
       ]
     }
   },
-  "ai": {
-    "page-actions": []
-  },
+  "ai": { "page-actions": [] },
   "title": "Coterie | Documentation",
   "description": "Documentation for Coterie Users | Launchpad for loyal audiences",
-  "customCss": [
-    {
-      "src": "styles/double-borders.css"
-    }
-  ]
+  "customCss": [{ "src": "styles/double-borders.css" }]
 }
